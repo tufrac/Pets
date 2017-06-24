@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_view_pet_vertical_margin">16dp</dimen>
+    <dimen name="card_view_pet_horizontal_margin">16dp</dimen>
+    <dimen name="card_view_pet_corner_radius">4dp</dimen>
+    <dimen name="elevation">4dp</dimen>
+    <dimen name="icon_width">40dp</dimen>
+    <dimen name="icon_height">40dp</dimen>
+    <dimen name="name_block_padding">10dp</dimen>
+    <dimen name="card_view_pet_title_size">20sp</dimen>
+    <dimen name="card_view_pet_icon_padding">10dp</dimen>
+</resources>
