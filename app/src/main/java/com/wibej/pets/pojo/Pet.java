@@ -1,4 +1,4 @@
-package com.wibej.pets;
+package com.wibej.pets.pojo;
 
 /**
  * Created by tufrac on 6/22/17.

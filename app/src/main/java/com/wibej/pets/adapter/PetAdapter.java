@@ -1,4 +1,4 @@
-package com.wibej.pets;
+package com.wibej.pets.adapter;
 
 import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.wibej.pets.pojo.Pet;
+import com.wibej.pets.R;
 
 import java.util.ArrayList;
 

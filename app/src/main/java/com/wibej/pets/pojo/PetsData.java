@@ -1,4 +1,7 @@
-package com.wibej.pets;
+package com.wibej.pets.pojo;
+
+import com.wibej.pets.R;
+import com.wibej.pets.pojo.Pet;
 
 import java.util.ArrayList;
 
@@ -54,4 +57,18 @@ public class PetsData {
         petsList.add(new Pet("Pet14", 0, R.drawable.tuxlinux));
     }
 
+    public ArrayList<Pet> getProfilePetsList(){
+        petsList = new ArrayList<Pet>();
+
+        petsList.add(new Pet("Pet1", 3, R.drawable.akitapuppy));
+        petsList.add(new Pet("Pet2", 0, R.drawable.cat));
+        petsList.add(new Pet("Pet3", 0, R.drawable.cocker_spaniel));
+        petsList.add(new Pet("Pet4", 9, R.drawable.conejo));
+        petsList.add(new Pet("Pet5", 7, R.drawable.cow));
+        petsList.add(new Pet("Pet6", 0, R.drawable.dog));
+        petsList.add(new Pet("Pet7", 6, R.drawable.hippo));
+        petsList.add(new Pet("Pet8", 0, R.drawable.lion));
+
+        return petsList;
+    }
 }

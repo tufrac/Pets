@@ -3,4 +3,18 @@
     <string name="pet_name">Pet Name</string>
     <string name="pet_rank">3</string>
     <string name="like_message">Te gusta </string>
+    <string name="menu_five_pets">Best Five</string>
+    <string name="menu_about">About Me</string>
+    <string name="menu_contact">Contact</string>
+    <string name="contact_name">Name</string>
+    <string name="contact_email">Email</string>
+    <string name="contact_message">Message</string>
+    <string name="contact_button">Send Comment</string>
+    <string name="about_name">Francisco Boche</string>
+    <string name="about_descrilption">I\'m a web developer that is learning how use Android</string>
+    <string name="pet_profile_name">Bolt</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

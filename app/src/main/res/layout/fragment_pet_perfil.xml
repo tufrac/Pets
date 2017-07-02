@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.wibej.pets.fragment.PetPerfilFragment"
+    android:orientation="vertical">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="@dimen/profile_image_dimen"
+        android:layout_height="@dimen/profile_image_dimen"
+        android:layout_marginTop="@dimen/card_view_pet_vertical_margin"
+        android:src="@drawable/tuxlinux"
+        app:civ_border_color="@color/colorAccent"
+        app:civ_border_width="4dp"
+        app:civ_shadow="true"
+        app:civ_shadow_radius="10"
+        app:civ_shadow_color="@color/colorPrimaryDark"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_marginTop="@dimen/card_view_pet_vertical_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pet_profile_name"
+        android:textAlignment="center"
+        android:textSize="@dimen/contact_text_size"
+        android:textStyle="bold"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvPetProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+    </android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>

@@ -9,4 +9,9 @@
     <dimen name="name_block_padding">10dp</dimen>
     <dimen name="card_view_pet_title_size">20sp</dimen>
     <dimen name="card_view_pet_icon_padding">10dp</dimen>
+    <dimen name="contact_text_size">22sp</dimen>
+    <dimen name="contact_button_width_min">88dp</dimen>
+    <dimen name="profile_image_dimen">150dp</dimen>
+    <dimen name="profile_card_view_height">100dp</dimen>
+    <dimen name="profile_card_view_margin">10dp</dimen>
 </resources>

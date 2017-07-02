@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+
+import com.wibej.pets.adapter.PetAdapter;
+import com.wibej.pets.pojo.Pet;
+import com.wibej.pets.pojo.PetsData;
 
 import java.util.ArrayList;
 
@@ -26,9 +28,9 @@ public class BestFivePets extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //Hide Rank
-        imgRank     = (ImageView) miActionBar.findViewById(R.id.tbImgRank);
-        imgRank.setVisibility(View.INVISIBLE);
+//        //Hide Rank
+//        imgRank     = (ImageView) miActionBar.findViewById(R.id.tbImgRank);
+//        imgRank.setVisibility(View.INVISIBLE);
 
 //        Recycler View Top Five
         allPets = (RecyclerView) findViewById(R.id.rvPets);
