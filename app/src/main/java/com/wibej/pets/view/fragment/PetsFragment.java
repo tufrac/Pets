@@ -1,7 +1,6 @@
-package com.wibej.pets.fragment;
+package com.wibej.pets.view.fragment;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,11 +9,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.wibej.pets.BestFivePets;
 import com.wibej.pets.R;
+import com.wibej.pets.adapter.BestFivePetsAdapter;
 import com.wibej.pets.adapter.PetAdapter;
 import com.wibej.pets.pojo.Pet;
 import com.wibej.pets.pojo.PetsData;
+import com.wibej.pets.presenter.IPetsFragmentViewPresenter;
+import com.wibej.pets.presenter.PetsFragmentViewPresenter;
 
 import java.util.ArrayList;
 
@@ -22,12 +23,11 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PetsFragment extends Fragment {
+public class PetsFragment extends Fragment implements IPetsFragmentView {
 
     private RecyclerView allPets;
-    private PetsData petsInfo = new PetsData();
-    ArrayList<Pet> petsList;
-
+//    ArrayList<Pet> petsList;
+    private IPetsFragmentViewPresenter presenter;
     public PetsFragment() {
         // Required empty public constructor
     }
@@ -39,22 +39,48 @@ public class PetsFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_pets, container, false);
 
         allPets = (RecyclerView) v.findViewById(R.id.rvPets);
+        presenter = new PetsFragmentViewPresenter(this, getContext());
 
-        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-//        GridLayoutManager glm = new GridLayoutManager(this, 2);
 
-        allPets.setLayoutManager(llm);
-        petsList = petsInfo.getPetsList();
-        initAdapter();
 
         // Inflate the layout for this fragment
         return v;
     }
 
-    public void initAdapter(){
-        PetAdapter adaptador = new PetAdapter(petsList, getActivity());
-        allPets.setAdapter(adaptador);
+
+    @Override
+    public void generateVerticalLinearLayout() {
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+//        GridLayoutManager glm = new GridLayoutManager(this, 2);
+
+        allPets.setLayoutManager(llm);
     }
 
+    @Override
+    public void generateGridLayout() {
+
+    }
+
+    @Override
+    public PetAdapter createAdapter(ArrayList<Pet> pets) {
+        PetAdapter adapter = new PetAdapter(pets, getActivity());
+
+        return adapter;
+    }
+
+    @Override
+    public BestFivePetsAdapter createBestFivePetsAdapter(ArrayList<Pet> pets) {
+        return null;
+    }
+
+    @Override
+    public void initAdapterRV(PetAdapter adapter) {
+        allPets.setAdapter(adapter);
+    }
+
+    @Override
+    public void initAdapterBestFivePetsRV(BestFivePetsAdapter adapter) {
+
+    }
 }

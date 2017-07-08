@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.wibej.pets.fragment.PetPerfilFragment"
+    tools:context="com.wibej.pets.view.fragment.PetPerfilFragment"
     android:orientation="vertical">
 
     <com.mikhaellopez.circularimageview.CircularImageView

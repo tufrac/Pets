@@ -5,9 +5,14 @@ package com.wibej.pets.pojo;
  */
 
 public class Pet {
+    private int id;
     private String name;
     private int ranking;
     private int photo;
+
+    public Pet() {
+
+    }
 
     public String getName() {
         return name;
@@ -40,5 +45,13 @@ public class Pet {
         this.name = name;
         this.ranking = ranking;
         this.photo = photo;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
